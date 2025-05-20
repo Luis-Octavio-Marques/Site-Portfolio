@@ -1,0 +1,126 @@
+.portifolio-container {
+  width: 95vw;
+  height: 95vh;
+  overflow: visible;
+  background-image: url("/public/img/background-div.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.swiper-slider {
+  overflow: visible;
+  width: 95vw;
+  height: 95vh;
+  border-radius: 50px;
+  position: relative;
+  left: 5.3vw;
+  bottom: -15vh;
+}
+
+.image-slide {
+  width: 85vw;
+  height: 75vh;
+  border-radius: 50px;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.image-slide:hover {
+  transform: scale(1.05);
+}
+
+.web-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo preta com opacidade de 50% */
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+.web-title {
+  color: white;
+  font-size: 3rem; /* Aproximadamente 5xl, ajustado para CSS */
+  font-weight: bold;
+}
+
+.web-description {
+  margin-bottom: 1rem; /* mb-3 em Tailwind corresponde a 1rem */
+  margin-top: 0.5rem; /* mt-2 em Tailwind corresponde a 0.5rem */
+  color: white;
+  font-size: 1.1em;
+  font-family: "Quicksand", sans-serif;
+}
+
+.web-button {
+  background-color: rgba(239 68 68); /* bg-red-500 */
+  color: white;
+  font-size: 1.5rem; /* text-2xl */
+  padding-left: 2rem; /* px-8 */
+  padding-right: 2rem; /* px-8 */
+  padding-top: 0.75rem; /* py-3 */
+  padding-bottom: 0.75rem; /* py-3 */
+  border-radius: 0.375rem; /* rounded-md */
+  font-family: 'Oswald', sans-serif; /* font-oswald */
+  transition: background-color 0.3s ease; /* transition duration-300 */
+}
+
+.web-button:hover {
+  background-color: rgba(220 38 38); /* hover:bg-red-600 */
+}
+
+@media (max-width: 600px) {
+
+  .portifolio-container {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .web-title {
+    font-size: 2.5em
+  }
+
+  .web-description {
+    margin-right: 10px;
+    margin-left: 10px
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+
+  .portifolio-container {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+
+  .web-title {
+    font-size: 2em
+  }
+
+  .web-description {
+    width: 80vw
+  }
+
+  .web-button {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .web-description {
+    font-size: 2em;
+  }
+}

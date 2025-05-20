@@ -1,0 +1,182 @@
+.contato-container {
+  width: 95vw; /* w-[95vw] */
+  height: 95vh; /* h-[95vh] */
+  background-image: url('/public/img/background-div.png'); /* bg-[url('/public/img/background-div.png')] */
+  background-size: cover; /* bg-cover */
+  background-position: center; /* bg-center */
+  border-radius: 20px; /* rounded-[20px] */
+  padding: 2rem 2.5rem 2.5rem 2.5rem; /* p-10 */
+  color: white; /* text-white */
+}
+
+.contact-title {
+  font-family: 'Gantari', sans-serif; /* Certifique-se de que a fonte está carregada */
+  margin-top: 0; /* mt-5 equivalente a 1.25rem */
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.red-line-contact {
+  position: relative;
+  width: 25vw;
+  height: 1px;
+  background-color: rgba(239 68 68); /* bg-red-500 */
+  margin-top: 0; /* mt-0 */
+}
+
+.form-container {
+  max-width: 80rem; /* max-w-5xl */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto; /* mx-auto */
+  margin-top: 1rem; /* mt-16 */
+  background-color: transparent; /* bg-transparent */
+  backdrop-filter: blur(10px); /* backdrop-blur-lg */
+  padding: 2rem; /* p-8 */
+  border-radius: 0.5rem; /* rounded-lg */
+  border: 1px solid white; /* border border-white */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+.send-message {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1rem; /* mb-6 */
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; /* 16px */
+  margin-bottom: 1rem; /* 16px */
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 8px */
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  margin-bottom: 0.25rem; /* 4px */
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem; /* 12px top/bottom, 16px left/right */
+  background-color: #333;
+  border: 1px solid white;
+  border-radius: 0.5rem; /* 8px */
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: gray;
+  box-shadow: 0 0 0 2px #6b7280; /* cinza no foco */
+}
+
+.message {
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.message-label {
+  display: flex;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  margin-bottom: 0.25rem; /* 4px */
+  gap: 0.5rem;
+}
+
+.message-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem; /* 12px top/bottom, 16px left/right */
+  background-color: #333;
+  border: 1px solid white;
+  border-radius: 0.5rem; /* 8px */
+  outline: none;
+  resize: vertical; /* permite redimensionar verticalmente */
+}
+
+.message-textarea:focus {
+  border-color: gray;
+  box-shadow: 0 0 0 2px #6b7280; /* borda cinza no foco */
+}
+
+.send-button {
+  width: 100%; /* w-full */
+  background-color: rgba(239 68 68); /* bg-red-500 */
+  color: white; /* text-white */
+  padding: 0.75rem 1.5rem; /* py-3 px-6 */
+  border-radius: 0.5rem; /* rounded-lg */
+  font-weight: 500; /* font-medium */
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  justify-content: center; /* justify-center */
+  transition: background-color 0.3s; /* transition-colors duration-300 */
+}
+
+.send-button:hover {
+  background-color: rgba(220 38 38); /* hover:bg-red-700 */
+}
+
+@media (max-width: 600px) {
+
+  .contato-container {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 90px;
+  }
+
+  .contact-title {
+    font-size: 1.7em;
+  }
+
+  .red-line-contact {
+    width: 230px;
+  }
+
+  .send-message {
+    font-size: 1.1em
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+
+  .contato-container {
+    height: auto;
+    padding-top: 70px;
+  }
+
+  .red-line-contact {
+    width: 350px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .contato-container {
+    padding-top: 100px;
+  }
+
+  .contact-title {
+    font-size: 3.5em;
+  }
+
+  .red-line-contact {
+    width: 500px;
+  }
+
+  .send-message {
+    font-size: 2em;
+  }
+
+  .form-label {
+    font-size: 1.4em;
+  }
+
+  .send-button {
+    font-size: 1.8em;
+  }
+}

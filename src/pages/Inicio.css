@@ -1,0 +1,293 @@
+.inicio-container {
+  background-image: url("/img/background-div.png");
+  background-size: cover;
+  background-position: center;
+  width: 95vw;
+  height: 95vh;
+  border-radius: 20px;
+  position: relative;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.content-flex {
+  height: 100%;
+  display: flex;
+  justify-content: space-betwen;
+  align-items: baseline;
+  color: white;
+}
+
+.left-title {
+  font-family: "Gantari", sans-serif;
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  width: 100vw;
+}
+
+.left-description {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #e5e7eb;
+}
+
+.red-line-start-1 {
+  width: 25vw;
+  height: 1px;
+  background-color: rgb(239 68 68);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left-text {
+  width: 30vw;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.icons-images-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-image {
+  width: 2.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-image:hover {
+  transform: scale(1.25);
+}
+
+.image-section {
+  position: absolute;
+  top: 15vh;
+  left: 37%;
+}
+
+.profile-image {
+  width: 25vw;
+  transition: transform 0.3s ease-out;
+}
+
+.right-section {
+  height: 95vh;
+  width: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  right: 40px;
+  bottom: 50px;
+}
+
+.right-text {
+  width: 25vw;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: right;
+}
+
+.red-line-start-2 {
+  width: 25vw;
+  height: 1px;
+  background-color: #ef4444;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+
+  .inicio-container {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-section {
+    padding-left: 10vw;
+    margin-top: 70px;
+  }
+
+  .left-title {
+    margin: 0;
+
+  }
+
+  .left-description {
+    margin: 0;
+  }
+
+  .red-line-start-1 {
+    margin-top: 10px;
+    width: 70vw;
+  }
+
+  .left-text {
+    width: 90vw;
+  }
+
+  .profile-image {
+    display: none;
+  }
+
+  .right-section {
+    position: static;
+    width: 100vw;
+    height: auto;
+    top: 0;
+    margin-top: 25px;
+  }
+
+  .right-text {
+    width: 90vw
+  }
+
+  .red-line-start-2 {
+    margin: 10px 0;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+
+  .inicio-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 0 0 0;
+  }
+
+  .content-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95vw;
+  }
+
+  .left-title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .left-description {
+    margin: 0;
+  }
+
+  .red-line-start-1 {
+    margin: 10px 0;
+  }
+
+  .left-text {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .profile-image {
+    display: none;
+  }
+
+  .right-section {
+    position: static;
+    width: 95vw;
+    height: auto;
+    top: 0;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .right-text {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .red-line-start-2 {
+    width: 600px
+  }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  .inicio-container {
+    padding: 1px 0 0 0;
+  }
+
+  .left-section {
+    width: 480px;
+  }
+
+  .left-text {
+    width: 500px
+  }
+
+  .red-line-start-2 {
+    width: 450px;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .inicio-container {
+    padding-top: 50px;
+  }
+
+  .left-title {
+    font-size: 60px;
+  }
+
+  .left-description {
+    font-size: 20px;
+  }
+
+  .left-text {
+    font-size: 23px;
+    width: 80vw;
+  }
+
+  .icon-image {
+    width: 60px;
+  }
+
+  .right-section {
+    width: 100vw;
+  }
+
+  .right-text {
+    width: 80vw;
+    font-size: 23px;
+  }
+
+  .red-line-start-2 {
+    width: 625px;
+  }
+  
+  .profile-image {
+    display: none;
+  }
+}

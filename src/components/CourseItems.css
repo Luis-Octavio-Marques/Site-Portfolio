@@ -1,0 +1,104 @@
+.course-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.course-accomplished {
+  color: white;
+  font-size: 2.25rem; /* 4xl no Tailwind = 2.25rem = 36px */
+  font-family: "Gantari", sans-serif; /* supondo que "Gantari" esteja importada */
+  font-weight: 600; /* font-semibold = 600 */
+  letter-spacing: 0px; /* tracking-wider = 0.05em */
+}
+
+.course-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem; /* mt-2 = 0.5rem = 8px */
+  cursor: grab;
+}
+
+.course-box:focus {
+  cursor: grabbing;
+}
+
+.course-box:active {
+  cursor: grabbing;
+}
+
+.red-line-about {
+  width: 32vw;
+  height: 1px;
+  opacity: 1;
+  background-color: #ef4444; /* bg-red-500 */
+  color: transparent;
+}
+
+.course-card {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border: 1px solid white;
+  border-radius: 0.5rem; /* rounded-lg */
+  padding: 1rem; /* p-4 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+.course-title {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 1rem; /* text-lg (18px) */
+}
+
+.course-project {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem; /* text-lg (18px) */
+}
+
+.course-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem; /* gap-5 (20px) */
+  margin-top: 0.75rem; /* mt-3 (12px) */
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+.skill {
+  background-color: #333;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem; /* rounded-lg (8px) */
+  cursor: default;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  margin: auto;
+  width: auto;
+  border: none;
+}
+
+.modal-close-button {
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: auto;
+}

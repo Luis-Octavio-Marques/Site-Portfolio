@@ -1,0 +1,210 @@
+/* Estilos para o botão do menu */
+.menu-button {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background-color: #333;
+  border: 1px solid white;
+  color: white;
+  padding: .7rem 1.7rem;
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+
+.menu-button:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* Estilos para o container do modal */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 30%;
+  transform: translateX(50%);
+  z-index: 50;
+  width: 40%;
+  max-width: 600px;
+  max-height: min(80vh, 400px);
+  color: white;
+  overflow-y: auto;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding-bottom: 1.25rem;
+  scroll-behavior: smooth;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+/* Estilos para esconder a barra de rolagem mas manter funcionalidade */
+.modal-container {
+  scrollbar-width: none; /* Firefox */
+}
+
+.modal-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Opera */
+}
+
+/* Animações */
+.modal-opening {
+  animation: fadeSlideIn 0.7s ease forwards;
+}
+
+.modal-closing {
+  animation: fadeSlideOut 0.7s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes fadeSlideOut {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* Navegação */
+.modal-nav {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Botão de fechar */
+.close-button {
+  border-radius: 9999px;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  /* Botão vai pra direita */
+  .menu-button {
+    top: 5%;
+    left: auto;
+    right: 1rem;
+    transform: none;
+  }
+
+  .menu-button:hover {
+    transform: scale(1.1);
+  }
+
+  .modal-container {
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem 20px;
+    border-radius: 0;
+  }
+
+  /* Conteúdo do modal ocupa toda a largura e os filhos ficam lado a lado */
+  .modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* Navegação lado a lado */
+  .nav-links {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-links {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+
+  .modal-container {
+    max-width: 100vw;
+    left: 0;
+  }
+
+  .modal-opening {
+    width: 100vw;
+  }
+
+  .modal-closing {
+    width: 100vw;
+  }
+
+  .nav-links {
+    font-size: 1.4em
+  }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+
+  .menu-button {
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    width: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .menu-button {
+    font-size: 1.5em;
+  }
+
+  .modal-opening {
+    width: 100vw;
+    left: 15%;
+  }
+
+  .modal-closing {
+    width: 100vw;
+    left: 15%;
+  }
+
+  .nav-links {
+    font-size: 1.5em;
+  }
+}

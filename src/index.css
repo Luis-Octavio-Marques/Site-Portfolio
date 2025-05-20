@@ -1,0 +1,134 @@
+/* Tailwind */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Carrossel */
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* Corpo do Site */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/img/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-y: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+  body {
+    overflow-y: auto;
+    height: auto;
+  }
+}
+/* Utilidades */
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+::selection {
+  background-color: rgba(239, 68, 68);
+}
+
+/* Fontes */
+
+@import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap");
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* como é variable font */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gantari";
+  src: url("./assets/fonts/Gantari-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Animações */
+
+@layer utilities {
+  @keyframes fadeSlideIn {
+    0% {
+      transform: translateY(-30px) scale(0.95);
+      opacity: 0;
+      background-color: #630606;
+    }
+    20% {
+      background-color: #ef4444;
+    }
+    60% {
+      transform: translateY(10px) scale(1.02);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      background-color: #1d1d21;
+    }
+  }
+
+  .animate-fadeSlideIn {
+    animation: fadeSlideIn 0.8s ease forwards;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeSlideOut {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      background-color: #1d1d21;
+    }
+    40% {
+      transform: translateY(-1px) scale(1.02);
+    }
+    80% {
+      background-color: #ef4444;
+    }
+    100% {
+      transform: translateY(-50px) scale(0.95);
+      opacity: 0;
+      background-color: #630606;
+    }
+  }
+
+  .animate-fadeSlideOut {
+    animation: fadeSlideOut 0.8s ease forwards;
+  }
+}
