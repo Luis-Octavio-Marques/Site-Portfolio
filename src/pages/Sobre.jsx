@@ -40,7 +40,6 @@ function Sobre() {
               <p className="library-frameworks"> Bibliotecas & Frameworks </p>
               <div className="frameworks-container">
                 <p className="react-js"> React.js </p>
-                <p className="styled-components"> Styled Components </p>
               </div>
             </div>
           </div>
