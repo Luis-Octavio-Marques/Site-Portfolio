@@ -14,7 +14,7 @@ import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
-import "./Portifolio.css"; // Importe o arquivo CSS criado
+import "./Portifolio.css";
 
 const images = [
   {
@@ -43,6 +43,12 @@ const images = [
     description: "O famoso Jogo da Velha para desafiar e se divertir com seu amigo.",
     link: "https://luis-octavio-marques.github.io/Site-Jogo-da-Velha/",
   },
+  {
+    title: "Country Web",
+    src: "/img/image-web5.png",
+    description: "Um site que apresenta um país de cada continente do mundo.",
+    link: "https://site-paises.vercel.app"
+  }
 ];
 
 function Portifolio() {
