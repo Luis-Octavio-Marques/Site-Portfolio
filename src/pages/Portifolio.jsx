@@ -44,10 +44,10 @@ const images = [
     link: "https://luis-octavio-marques.github.io/Site-Jogo-da-Velha/",
   },
   {
-    title: "Country Web",
+    title: "Brasil Web",
     src: "/img/image-web5.png",
-    description: "Um site que apresenta um país de cada continente do mundo.",
-    link: "https://site-paises.vercel.app"
+    description: "Um site que apresenta as riquezas culturais e naturais do Brasil.",
+    link: "https://site-brasil-web.vercel.app"
   }
 ];
 
