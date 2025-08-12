@@ -23,40 +23,6 @@ const cursos = [
       "Git/Github",
     ],
   },
-  {
-    title: "Curso Básico Full-Stack",
-    provider: "Hashtag Treinamentos",
-    project:
-      "Curso básico de Fullstack, aprendendo habilidades nas principais tecnologias do mercado",
-    image: "/img/Certificado-Jornada-Fullstack.png",
-    languages: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Node",
-      "Mongo",
-      "Express",
-      "Git/Github",
-    ],
-  },
-  {
-    title: "Curso Básico Full-Stack",
-    provider: "Hashtag Treinamentos",
-    project:
-      "Curso básico de Fullstack, aprendendo habilidades nas principais tecnologias do mercado",
-    image: "/img/Certificado-Jornada-Fullstack.png",
-    languages: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Node",
-      "Mongo",
-      "Express",
-      "Git/Github",
-    ],
-  },
 ];
 
 function CurseItems() {
