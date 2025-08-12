@@ -16,6 +16,8 @@ function Inicio() {
   const [transformStyle, setTransformStyle] = useState("translate(0px, 0px)");
 
   const handleMouseMove = (e) => {
+    if (window.innerWidth <= 768) return;
+
     const { width, height, left, top } = imgRef.current.getBoundingClientRect();
     const x = e.clientX - left - width / 2;
     const y = e.clientY - top - height / 2;
@@ -32,8 +34,8 @@ function Inicio() {
 
   return (
     <>
+      <ModalMenu />
       <div className="inicio-container">
-        <ModalMenu />
         <div className="content-flex">
           <div className="left-section">
             <h1 className="left-title"> Luís Octávio</h1>

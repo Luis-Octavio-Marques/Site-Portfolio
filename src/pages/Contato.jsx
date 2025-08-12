@@ -28,8 +28,8 @@ function Contato() {
 
   return (
     <>
+      <ModalMenu />
       <div className="contato-container">
-        <ModalMenu />
         <h1 className="contact-title"> Entre em Contato </h1>
         <div className="red-line-contact"></div>
         <div className="form-container">
@@ -77,7 +77,10 @@ function Contato() {
             <div class="message">
               <label for="message" class="form-label">
                 Mensagem
-                <span className="icon"> <Send /></span>
+                <span className="icon">
+                  {" "}
+                  <Send />
+                </span>
               </label>
               <textarea
                 id="message"

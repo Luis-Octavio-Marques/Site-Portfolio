@@ -6,8 +6,8 @@ import "./Sobre.css";
 function Sobre() {
   return (
     <>
+      <ModalMenu />
       <div className="sobre-container">
-        <ModalMenu />
         <div className="about-container">
           <h1 className="about-title">Sobre Mim</h1>
           <div className="red-line-about-1"></div>
@@ -51,37 +51,3 @@ function Sobre() {
 }
 
 export default Sobre;
-
-{
-  /* 
-  <div>
-              <p className="technology-tools"> Tecnologias e Ferramentas </p>
-              <div className="technology-container">
-                <p style={abilityStyle} className="html">
-                  {" "}
-                  HTML{" "}
-                </p>
-                <p style={abilityStyle} className="css">
-                  {" "}
-                  CSS{" "}
-                </p>
-                <p style={abilityStyle} className="javascript">
-                  {" "}
-                  JavaScript{" "}
-                </p>
-                <p style={abilityStyle} className="vite">
-                  {" "}
-                  Vite{" "}
-                </p>
-                <p style={abilityStyle} className="git-github">
-                  {" "}
-                  Git/GitHub{" "}
-                </p>
-                <p style={abilityStyle} className="soft-skills">
-                  {" "}
-                  Soft Skills {" "}
-                </p>{" "}
-              </div>
-            </div>
-  */
-}

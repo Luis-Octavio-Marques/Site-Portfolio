@@ -1,7 +1,6 @@
 /* Estilos para o botão do menu */
 .menu-button {
-  position: fixed;
-  top: 5%;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
@@ -113,7 +112,7 @@
 @media (max-width: 600px) {
   /* Botão vai pra direita */
   .menu-button {
-    top: 5%;
+    top: 3%;
     left: auto;
     right: 1rem;
     transform: none;

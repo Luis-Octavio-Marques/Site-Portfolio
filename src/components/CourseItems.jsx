@@ -93,7 +93,7 @@ function CurseItems() {
             <img
               src={selectedCourse.image}
               alt="Certificado"
-              className="w-[50vw] m-auto object-cover rounded-lg"
+              className="md:w-[50vw] w-[95vw] m-auto object-cover rounded-lg"
             />
 
             <button onClick={closeModal} className="modal-close-button">

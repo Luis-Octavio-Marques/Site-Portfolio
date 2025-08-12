@@ -1,17 +1,19 @@
+/* Layout Principal */
 .contato-container {
-  width: 95vw; /* w-[95vw] */
-  height: 95vh; /* h-[95vh] */
-  background-image: url('/public/img/background-div.png'); /* bg-[url('/public/img/background-div.png')] */
-  background-size: cover; /* bg-cover */
-  background-position: center; /* bg-center */
-  border-radius: 20px; /* rounded-[20px] */
-  padding: 2rem 2.5rem 2.5rem 2.5rem; /* p-10 */
-  color: white; /* text-white */
+  width: 95vw;
+  height: 95vh;
+  background-image: url('/public/img/background-div.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+  color: white;
 }
 
+/* Cabeçalho */
 .contact-title {
-  font-family: 'Gantari', sans-serif; /* Certifique-se de que a fonte está carregada */
-  margin-top: 0; /* mt-5 equivalente a 1.25rem */
+  font-family: 'Gantari', sans-serif;
+  margin-top: 0;
   font-size: 2.5em;
   font-weight: bold;
 }
@@ -20,142 +22,125 @@
   position: relative;
   width: 25vw;
   height: 1px;
-  background-color: rgba(239 68 68); /* bg-red-500 */
-  margin-top: 0; /* mt-0 */
+  background-color: rgba(239 68 68);
+  margin-top: 0;
 }
 
+/* Formulário */
 .form-container {
-  max-width: 80rem; /* max-w-5xl */
-  margin-left: auto; /* mx-auto */
-  margin-right: auto; /* mx-auto */
-  margin-top: 1rem; /* mt-16 */
-  background-color: transparent; /* bg-transparent */
-  backdrop-filter: blur(10px); /* backdrop-blur-lg */
-  padding: 2rem; /* p-8 */
-  border-radius: 0.5rem; /* rounded-lg */
-  border: 1px solid white; /* border border-white */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .send-message {
-  font-size: 1.5rem; /* text-2xl */
-  font-weight: 600; /* font-semibold */
-  margin-bottom: 1rem; /* mb-6 */
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
+
+/* Grid de Campos */
 
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem; /* 16px */
-  margin-bottom: 1rem; /* 16px */
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
+
+/* Campos de Entrada */
 
 .form-label {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* 8px */
-  font-size: 0.875rem; /* 14px */
+  gap: 0.5rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 0.25rem; /* 4px */
+  margin-bottom: 0.25rem;
 }
 
 .form-input {
   width: 100%;
-  padding: 0.75rem 1rem; /* 12px top/bottom, 16px left/right */
+  padding: 0.75rem 1rem;
   background-color: #333;
   border: 1px solid white;
-  border-radius: 0.5rem; /* 8px */
+  border-radius: 0.5rem;
   outline: none;
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .form-input:focus {
   border-color: gray;
-  box-shadow: 0 0 0 2px #6b7280; /* cinza no foco */
+  box-shadow: 0 0 0 2px #6b7280;
 }
 
+/* Área de Mensagem */
 .message {
-  margin-bottom: 1.5rem; /* 24px */
+  margin-bottom: 1.5rem;
 }
 
 .message-label {
   display: flex;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 0.25rem; /* 4px */
+  margin-bottom: 0.25rem;
   gap: 0.5rem;
 }
 
 .message-textarea {
   width: 100%;
-  padding: 0.75rem 1rem; /* 12px top/bottom, 16px left/right */
+  padding: 0.75rem 1rem;
   background-color: #333;
   border: 1px solid white;
-  border-radius: 0.5rem; /* 8px */
+  border-radius: 0.5rem;
   outline: none;
-  resize: vertical; /* permite redimensionar verticalmente */
+  resize: vertical;
+  color: white;
+  min-height: 120px;
+  transition: all 0.3s ease;
 }
 
 .message-textarea:focus {
   border-color: gray;
-  box-shadow: 0 0 0 2px #6b7280; /* borda cinza no foco */
+  box-shadow: 0 0 0 2px #6b7280;
 }
 
+/* Botão de Enviar */
 .send-button {
-  width: 100%; /* w-full */
-  background-color: rgba(239 68 68); /* bg-red-500 */
-  color: white; /* text-white */
-  padding: 0.75rem 1.5rem; /* py-3 px-6 */
-  border-radius: 0.5rem; /* rounded-lg */
-  font-weight: 500; /* font-medium */
-  display: flex; /* flex */
-  align-items: center; /* items-center */
-  justify-content: center; /* justify-center */
-  transition: background-color 0.3s; /* transition-colors duration-300 */
+  width: 100%;
+  background-color: rgba(239 68 68);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .send-button:hover {
-  background-color: rgba(220 38 38); /* hover:bg-red-700 */
+  background-color: rgba(220 38 38);
+  transform: translateY(-1px);
 }
 
-@media (max-width: 600px) {
-
-  .contato-container {
-    height: auto;
-    min-height: 100vh;
-    padding-top: 90px;
-  }
-
-  .contact-title {
-    font-size: 1.7em;
-  }
-
-  .red-line-contact {
-    width: 230px;
-  }
-
-  .send-message {
-    font-size: 1.1em
-  }
-
-  .form-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.send-button:active {
+  transform: translateY(0);
 }
 
-@media (max-width: 950px) and (orientation: landscape) {
-
-  .contato-container {
-    height: auto;
-    padding-top: 70px;
-  }
-
-  .red-line-contact {
-    width: 350px;
-  }
-}
-
+/* Tablets (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-
   .contato-container {
     padding-top: 100px;
   }
@@ -178,5 +163,132 @@
 
   .send-button {
     font-size: 1.8em;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Modo Paisagem (até 950px landscape) */
+@media (max-width: 950px) and (orientation: landscape) {
+  .contato-container {
+    height: auto;
+    padding-top: 70px;
+  }
+
+  .red-line-contact {
+    width: 350px;
+  }
+}
+
+/* Mobile (até 600px) */
+
+@media (max-width: 600px) {
+  .contato-container {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 90px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0;
+    width: 100vw;
+  }
+
+  .contact-title {
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  .red-line-contact {
+    width: 230px;
+    margin: 1rem auto;
+  }
+
+  .send-message {
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .form-input,
+  .message-textarea {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .send-button {
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  /* Labels maiores para melhor legibilidade */
+  .form-label,
+  .message-label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile muito pequeno (até 360px) */
+@media (max-width: 360px) {
+  .contato-container {
+    padding: 1rem;
+    padding-top: 80px;
+  }
+
+  .contact-title {
+    font-size: 1.5em;
+  }
+
+  .red-line-contact {
+    width: 180px;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+
+  .send-message {
+    font-size: 1em;
+  }
+}
+
+/* Telas muito baixas (altura < 500px) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .contato-container {
+    padding-top: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .contact-title {
+    font-size: 1.8em;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-container {
+    margin-top: 0.5rem;
+    padding: 1rem;
+  }
+
+  .send-message {
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .message-textarea {
+    min-height: 80px;
+  }
+
+  .form-grid {
+    gap: 0.5rem;
   }
 }

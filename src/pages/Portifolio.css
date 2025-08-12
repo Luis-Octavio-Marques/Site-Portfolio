@@ -1,38 +1,48 @@
 .portifolio-container {
-  width: 95vw;
-  height: 95vh;
+  width: min(95vw, 1400px);
+  height: min(95vh, 800px);
+  min-height: 500px;
   overflow: visible;
   background-image: url("/public/img/background-div.png");
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  border-radius: clamp(10px, 2vw, 20px);
+  margin: 0 auto;
 }
 
 .swiper-slider {
   overflow: visible;
-  width: 95vw;
-  height: 95vh;
-  border-radius: 50px;
+  width: min(95vw, 1400px);
+  height: min(95vh, 800px);
+  min-height: 500px;
+  border-radius: clamp(20px, 4vw, 50px);
   position: relative;
-  left: 5.3vw;
+  left: clamp(2vw, 5.3vw, 80px);
   bottom: -15vh;
 }
 
 .image-slide {
-  width: 85vw;
-  height: 75vh;
-  border-radius: 50px;
+  width: min(85vw, 1200px);
+  height: min(75vh, 600px);
+  min-height: 400px;
+  border-radius: clamp(20px, 4vw, 50px);
   object-fit: cover;
   background-position: center;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .image-slide:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+}
+
+@media (hover: none) {
+  .image-slide:hover {
+    transform: none;
+  }
 }
 
 .web-container {
@@ -41,86 +51,220 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo preta com opacidade de 50% */
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
-  border-radius: 50px;
+  border-radius: clamp(20px, 4vw, 50px);
+  padding: clamp(1rem, 4vw, 2rem);
+  box-sizing: border-box;
 }
 
 .web-title {
   color: white;
-  font-size: 3rem; /* Aproximadamente 5xl, ajustado para CSS */
+  font-size: clamp(1.8rem, 6vw, 3rem);
   font-weight: bold;
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  line-height: 1.2;
 }
 
 .web-description {
-  margin-bottom: 1rem; /* mb-3 em Tailwind corresponde a 1rem */
-  margin-top: 0.5rem; /* mt-2 em Tailwind corresponde a 0.5rem */
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
   color: white;
-  font-size: 1.1em;
+  font-size: clamp(1rem, 3vw, 1.1rem);
   font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+  max-width: 90%;
 }
 
 .web-button {
-  background-color: rgba(239 68 68); /* bg-red-500 */
+  background-color: rgb(239, 68, 68);
   color: white;
-  font-size: 1.5rem; /* text-2xl */
-  padding-left: 2rem; /* px-8 */
-  padding-right: 2rem; /* px-8 */
-  padding-top: 0.75rem; /* py-3 */
-  padding-bottom: 0.75rem; /* py-3 */
-  border-radius: 0.375rem; /* rounded-md */
-  font-family: 'Oswald', sans-serif; /* font-oswald */
-  transition: background-color 0.3s ease; /* transition duration-300 */
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+  border-radius: 0.375rem;
+  font-family: 'Oswald', sans-serif;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  min-height: 44px; /* Acessibilidade: tamanho mínimo de toque */
+  min-width: 44px;
 }
 
-.web-button:hover {
-  background-color: rgba(220 38 38); /* hover:bg-red-600 */
+.web-button:hover,
+.web-button:focus {
+  background-color: rgb(220, 38, 38);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
+.web-button:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
 
+.web-button:active {
+  transform: translateY(0);
+}
+
+/* Smartphones em modo retrato */
+@media (max-width: 480px) {
+  .portifolio-container {
+    width: 98vw;
+    height: 100vh;
+    min-height: 100vh;
+    border-radius: 10px;
+  }
+
+  .swiper-slider {
+    width: 98vw;
+    left: 4%;
+    bottom: -13vh;
+  }
+
+  .image-slide {
+    width: 90vw;
+    height: 80vh;
+    min-height: 500px;
+  }
+
+  .web-container {
+    padding: 1rem;
+  }
+
+  .web-title {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .web-description {
+    font-size: clamp(0.9rem, 4vw, 1rem);
+    margin: 0.5rem 0 1rem 0;
+  }
+}
+
+/* Tablets em modo retrato */
+@media (min-width: 481px) and (max-width: 768px) {
+  .web-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+  }
+
+  .web-description {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+}
+
+/* Tablets em modo paisagem */
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .portifolio-container {
+    height: 100vh;
+  }
+
+  .swiper-slider {
+    bottom: -5vh;
+  }
+
+  .image-slide {
+    height: 85vh;
+  }
+
+  .web-title {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+  }
+
+  .web-description {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+}
+
+/* Smartphones em modo paisagem */
+@media (max-width: 850px) and (orientation: landscape) and (max-height: 500px) {
   .portifolio-container {
     height: 100vh;
     overflow: hidden;
   }
 
-  .web-title {
-    font-size: 2.5em
-  }
-
-  .web-description {
-    margin-right: 10px;
-    margin-left: 10px
-  }
-}
-
-@media (max-width: 950px) and (orientation: landscape) {
-
-  .portifolio-container {
+  .swiper-slider {
+    bottom: 0;
     height: 100vh;
-    overflow: hidden;
   }
-}
 
-@media (max-width: 600px) and (orientation: landscape) {
+  .image-slide {
+    height: 95vh;
+  }
+
+  .web-container {
+    padding: 0.5rem;
+  }
 
   .web-title {
-    font-size: 2em
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    margin-bottom: 0.5rem;
   }
 
   .web-description {
-    width: 80vw
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    margin: 0.25rem 0 0.75rem 0;
+    max-width: 80%;
   }
 
   .web-button {
-    font-size: 1em;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    padding: 0.5rem 1rem;
   }
 }
 
-@media (max-width: 850px) {
+/* Telas muito pequenas */
+@media (max-width: 320px) {
+  .web-title {
+    font-size: 1.3rem;
+  }
 
   .web-description {
-    font-size: 2em;
+    font-size: 0.85rem;
+  }
+
+  .web-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Telas muito grandes */
+@media (min-width: 1400px) {
+  .portifolio-container,
+  .swiper-slider {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .image-slide {
+    max-width: 1200px;
+  }
+}
+
+/* Preferências de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .image-slide,
+  .web-button {
+    transition: none;
+  }
+
+  .image-slide:hover {
+    transform: none;
+  }
+
+  .web-button:hover {
+    transform: none;
+  }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+  .web-container {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .web-button:focus {
+    outline: 3px solid white;
   }
 }
