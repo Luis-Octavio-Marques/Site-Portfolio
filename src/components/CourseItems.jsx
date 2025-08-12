@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -22,12 +22,63 @@ const cursos = [
       "Express",
       "Git/Github",
     ],
-  }
+  },
+  {
+    title: "Curso Básico Full-Stack",
+    provider: "Hashtag Treinamentos",
+    project:
+      "Curso básico de Fullstack, aprendendo habilidades nas principais tecnologias do mercado",
+    image: "/img/Certificado-Jornada-Fullstack.png",
+    languages: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node",
+      "Mongo",
+      "Express",
+      "Git/Github",
+    ],
+  },
+  {
+    title: "Curso Básico Full-Stack",
+    provider: "Hashtag Treinamentos",
+    project:
+      "Curso básico de Fullstack, aprendendo habilidades nas principais tecnologias do mercado",
+    image: "/img/Certificado-Jornada-Fullstack.png",
+    languages: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node",
+      "Mongo",
+      "Express",
+      "Git/Github",
+    ],
+  },
 ];
 
 function CurseItems() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Hook para detectar se é mobile
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Verifica no carregamento inicial
+    checkIsMobile();
+
+    // Adiciona listener para mudanças no tamanho da tela
+    window.addEventListener('resize', checkIsMobile);
+
+    // Cleanup do listener
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
   const openModal = (curso) => {
     setSelectedCourse(curso);
@@ -45,9 +96,9 @@ function CurseItems() {
       <div className="red-line-about" />
 
       <Swiper
-        direction="vertical"
+        direction={isMobile ? "horizontal" : "vertical"}
         spaceBetween={20}
-        slidesPerView={2}
+        slidesPerView={isMobile ? 1 : 2}
         loop={true}
         autoplay={{
           delay: 5000,
@@ -55,7 +106,11 @@ function CurseItems() {
         }}
         speed={1500}
         modules={[Autoplay]}
-        style={{ height: "990px", marginTop: "5px" }}
+        style={{ 
+          height: isMobile ? "500px" : "990px", 
+          marginTop: "5px",
+          width: "100%"
+        }}
       >
         {cursos.map((curso, index) => (
           <SwiperSlide key={index}>
